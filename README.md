@@ -93,6 +93,12 @@ file is not part of this repository.
   1 MiB / 1024x1024 gate.
 - The image differs from the kit starter's image (different bytes and size:
   the starter ships a 512x512 image of 278,443 bytes).
+- Parent verification (second pair of eyes, after the build): the poster was
+  read back at full size and re-rendered independently from the build HTML
+  with headless Chrome — the re-render's sha256 is identical
+  (c072cc68…), so the image is deterministic. All five files were then
+  verified byte-exact on GitHub at the submitted commit, including
+  entry.png (blob 3cfa067e…) after the author's own upload.
 - The poster was read back at full size and every headline checked for
   legibility: masthead, lead, both feature headlines, the four mid-page
   headlines, all four briefs and the footer are legible with no clipping
